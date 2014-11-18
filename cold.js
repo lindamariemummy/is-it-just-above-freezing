@@ -1,21 +1,18 @@
-$( document ).ready(function() {
-
+$(document).ready(function() {
   var x = document.getElementById("demo");
   getLocation();
-
   });
 
   //I used information and code from
   //http://www.w3schools.com/html/html5_geolocation.asp
   //to help me access the browser's geolocation ability
   function getLocation() {
-      if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(usePosition);
-      } else {
-          x.innerHTML = "Geolocation is not supported by this browser.";
-      }
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(usePosition);
+    } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
   }
-
   function usePosition(position) {
     var x = document.getElementById("demo");
     var temperature;
@@ -29,6 +26,5 @@ $( document ).ready(function() {
      else {
       x.innerHTML =  "<h1> NO </h1>";
      }
-     x.innerHTML = temperature;
   });
 }
