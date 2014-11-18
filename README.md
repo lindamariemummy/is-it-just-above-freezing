@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lindamariemummy/can-i-store-my-brewskies-outside.svg)](https://travis-ci.org/lindamariemummy/can-i-store-my-brewskies-outside)
+[![Build Status](https://travis-ci.org/lindamariemummy/is-it-just-above-freezing.svg)](https://travis-ci.org/lindamariemummy/is-it-just-above-freezing)
 
 This app reads the users location, and sends a post request to my server at
 https://isitcoldenough.herokuapp.com/ to determine if the temperature outside
