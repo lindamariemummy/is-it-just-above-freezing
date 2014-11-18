@@ -29,5 +29,6 @@ $( document ).ready(function() {
      else {
       x.innerHTML =  "<h1> NO </h1>";
      }
+     x.innerHTML = temperature;
   });
 }
