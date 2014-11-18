@@ -15,7 +15,6 @@ describe('basic weather test', function() {
       + '47.60' + ',' + '-122.33'
       + '.json')
     .end(function(err, data) {
-      var parsedData = JSON.parse(data.text);
       temp1 = data.body.current_observation.temp_f;
       done();
     });
