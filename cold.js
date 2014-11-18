@@ -19,8 +19,7 @@ $( document ).ready(function() {
   function usePosition(position) {
     var x = document.getElementById("demo");
     var temperature;
-//https://isitcoldenough.herokuapp.com/api/
-   $.get('http://localhost:3000/api/'+
+   $.get('https://isitcoldenough.herokuapp.com/api/'+
     parseFloat(position.coords.latitude).toFixed(2) + '/' +
     parseFloat(position.coords.longitude).toFixed(2), function(data) {
      temperature = data.temp;
