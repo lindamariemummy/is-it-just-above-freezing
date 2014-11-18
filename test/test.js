@@ -24,10 +24,11 @@ describe('basic weather test', function() {
     });
   });
   it('should display the correct response for Seattle', function(done) {
-    chai.request('http://localhost:3000')
+    chai.request('https://isitcoldenough.herokuapp.com')
     .get('/api/47.60/-122.33')
     .end(function(err, res) {
       expect(res.statusCode).to.eql(200);
+      console.log(res);
       temp2 = res.body.temp;
       expect(temp1).to.eql(temp2);
       done();
