@@ -20,8 +20,12 @@
     "mocha": "^2.0.1",
     "superagent": "^0.21.0"
   },
+    "directories": {
+    "test": "test"
+  },
   "dependencies": {
     "express": "^4.10.2",
-    "superagent": "^0.21.0"
+    "superagent": "^0.21.0",
+    "grunt": "^0.4.5"
   }
 }

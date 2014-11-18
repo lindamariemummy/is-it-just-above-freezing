@@ -1,5 +1,3 @@
-// grunt test runs of different database (notes_test)
-process.env.MONGO_URL = 'mongodb://localhost/notes_test';
 var chai = require('chai');
 var chaihttp = require('chai-http');
 chai.use(chaihttp);
@@ -28,7 +26,6 @@ describe('basic weather test', function() {
     .get('/api/47.60/-122.33')
     .end(function(err, res) {
       expect(res.statusCode).to.eql(200);
-      console.log(res);
       temp2 = res.body.temp;
       expect(temp1).to.eql(temp2);
       done();
