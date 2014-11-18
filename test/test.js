@@ -6,7 +6,6 @@ require('../server');
 
 var expect = chai.expect;
 var temp1, temp2;
-var yesNo;
 
 describe('basic weather test', function() {
   it('gets a temperature', function(done) {
@@ -17,7 +16,7 @@ describe('basic weather test', function() {
       + '.json')
     .end(function(err, data) {
       var parsedData = JSON.parse(data.text);
-      temp1 = parsedData.current_observation.temp_f;
+      temp1 = data.body.current_observation.temp_f;
       done();
     });
   });
