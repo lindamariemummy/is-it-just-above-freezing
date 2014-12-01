@@ -14,7 +14,6 @@ app.get('/api/:lat/:lon', function (req, res) {
   .get(WU_URL)
   .end(function (err, data) {
     var parsedData = JSON.parse(data.text);
-    console.log(parsedData);
     res.status(200).json({temp: parsedData.current_observation.temp_f});
   });
 });

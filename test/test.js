@@ -15,13 +15,14 @@ describe('basic weather test', function() {
       + '47.60' + ',' + '-122.33'
       + '.json')
     .end(function(err, data) {
-      console.log(data.body.current_observation.temp_f);
-      temp1 = data.body.current_observation.temp_f;
+      var parsedData = JSON.parse(data.text);
+      temp1 = parsedData.current_observation.temp_f;
+      expect(temp1).to.be.gt(0);
       done();
     });
   });
   it('should display the correct response for Seattle', function(done) {
-    chai.request('https://isitcoldenough.herokuapp.com')
+    chai.request('http://localhost:3000')
     .get('/api/47.60/-122.33')
     .end(function(err, res) {
       expect(res.statusCode).to.eql(200);
