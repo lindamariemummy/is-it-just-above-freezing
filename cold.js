@@ -20,7 +20,7 @@ $(document).ready(function() {
     parseFloat(position.coords.latitude).toFixed(2) + '/' +
     parseFloat(position.coords.longitude).toFixed(2), function(data) {
      temperature = data.temp;
-     if (temperature >= 32 && temperature <= 42) {
+     if (temperature < 32) {
       x.innerHTML = "<h1> YES </h1>";
      }
      else {

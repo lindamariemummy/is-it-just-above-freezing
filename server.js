@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var request = require('superagent');
 
-app.use(express.static(__dirname + ''));
+app.use(express.static(__dirname + '/build'));
 
 //code modified from Ivan Storck's in class demonstration
 app.get('/api/:lat/:lon', function (req, res) {
@@ -14,6 +14,7 @@ app.get('/api/:lat/:lon', function (req, res) {
   .get(WU_URL)
   .end(function (err, data) {
     var parsedData = JSON.parse(data.text);
+    console.log(parsedData);
     res.status(200).json({temp: parsedData.current_observation.temp_f});
   });
 });
