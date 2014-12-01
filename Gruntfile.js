@@ -21,7 +21,14 @@ module.exports = function(grunt) {
         dest: 'build/'
       }
     },
+    jscs: {
 
+      src: ['server.js', 'app/*.js'],
+
+      options: {
+        config: '.jscsrc'
+      }
+    },
     browserify: {
       dev: {
         src: ['app/cold.js'],
@@ -35,7 +42,7 @@ module.exports = function(grunt) {
       options: {
         node: true
       },
-      src: ['cold.js', 'server.js']
+      src: ['app/*.js', 'server.js']
     },
 
     simplemocha: {
@@ -43,6 +50,6 @@ module.exports = function(grunt) {
     }
   });
   grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev'])
-  grunt.registerTask('test', ['jshint', 'simplemocha']);
+  grunt.registerTask('test', ['jshint', 'jscs','simplemocha']);
   grunt.registerTask('default', ['test']);
 };

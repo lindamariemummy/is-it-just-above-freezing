@@ -7,4 +7,4 @@ module.exports = function(temperature, criticalTemperature) {
   else {
     x.innerHTML =  "<h1> NO </h1>";
   }
-}
+};
