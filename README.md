@@ -1,8 +1,6 @@
 [![Build Status](https://travis-ci.org/lindamariemummy/is-it-just-above-freezing.svg)](https://travis-ci.org/lindamariemummy/is-it-just-above-freezing)
 
-This app reads the users location, and sends a post request to my server at
-https://isitcoldenough.herokuapp.com/ to determine if the temperature outside
-is between 32 and 42 degree (optimal beer temp)
+This app reads the users location, and sends a post request a local serve and displays whether or not the temperature outside is above freezing.
 
 
 I used information and code from
