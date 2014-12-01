@@ -1,0 +1,7 @@
+{
+  "preset": "airbnb",
+  "requireMultipleVarDecl": null,
+  "validateQuoteMarks": true,
+  "disallowMixedSpacesAndTabs": "smart",
+  "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties"
+}
